@@ -19,17 +19,17 @@ import com.DesarrolloWEB_crud.demopostgres.entity.Prestamo;
 import com.DesarrolloWEB_crud.demopostgres.services.PrestamoService;
 
 @RestController
-@RequestMapping("/api/v1/prestamos")
-public class PrestamoController {
+@RequestMapping("/api/v1/proceso")
+public class Proceso {
 
     @Autowired
-    private PrestamoService prestamoService;
+    private procesoService procesoervice;
 
     @GetMapping
-    public ResponseEntity<Object> getAllPrestamos() {
+    public ResponseEntity<Object> getAllproceso() {
         try {
-            List<Prestamo> prestamos = prestamoService.findAll();
-            return new ResponseEntity<>(prestamos, HttpStatus.OK);
+            List<proceso> proceso = procesoService.findAll();
+            return new ResponseEntity<>(proceso, HttpStatus.OK);
         } catch (Exception e) {
             Map<String, Object> errorResponse = new HashMap<>();
             errorResponse.put("message", "Internal Server Error");
@@ -37,12 +37,12 @@ public class PrestamoController {
         }
     }
 
-    @GetMapping("/prestamos/{id}")
-    public ResponseEntity<Object> getPrestamoById(@PathVariable Long id) {
+    @GetMapping("/proceso/{id}")
+    public ResponseEntity<Object> getprocesoById(@PathVariable Long id) {
         try {
-            Prestamo prestamo = prestamoService.findById(id);
-            if (prestamo != null) {
-                return new ResponseEntity<>(prestamo, HttpStatus.OK);
+            proceso proceso = procesoService.findById(id);
+            if (proceso != null) {
+                return new ResponseEntity<>(proceso, HttpStatus.OK);
             } else {
                 Map<String, Object> errorResponse = new HashMap<>();
                 errorResponse.put("message", "Prestamo not found with id: " + id);
@@ -55,11 +55,11 @@ public class PrestamoController {
         }
     }
 
-    @PostMapping("/prestamos")
-    public ResponseEntity<Object> createPrestamo(@RequestBody Prestamo prestamo) {
+    @PostMapping("/proceso")
+    public ResponseEntity<Object> createproceso(@RequestBody Prestamo prestamo) {
         try {
-            Prestamo createdPrestamo = prestamoService.save(prestamo);
-            return new ResponseEntity<>(createdPrestamo, HttpStatus.CREATED);
+            proceso createdproceso = procesoService.save(prestamo);
+            return new ResponseEntity<>(createdproceso, HttpStatus.CREATED);
         } catch (Exception e) {
             Map<String, Object> errorResponse = new HashMap<>();
             errorResponse.put("message", "Internal Server Error");
@@ -68,16 +68,16 @@ public class PrestamoController {
     }
 
 
-    @PutMapping("/prestamos/{id}")
+    @PutMapping("/proceso/{id}")
     public ResponseEntity<Object> updatePrestamo(@PathVariable Long id, @RequestBody Prestamo prestamo) {
         Map<String, Object> map = new HashMap<>();
 
         try {
-            Prestamo currentPrestamo = prestamoService.findById(id);
+            Prestamo currentproceso = proceso.findById(id);
             // Actualiza los campos necesarios del objeto prestamo
             // por ejemplo: currentPrestamo.setCampoNuevo(prestamo.getCampoNuevo());
 
-            Prestamo updatedPrestamo = prestamoService.save(currentPrestamo);
+            Prestamo proceso = proceso.save(currentPrestamo);
             return new ResponseEntity<>(updatedPrestamo, HttpStatus.OK);
         } catch (Exception e) {
             map.put("message", e.getMessage());
