@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu niveles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="board" class="fondoNiveles ">
+<div class="menu">
+    <button class="menu-btn" onclick="toggleMenu()">Menú</button>
+    <ul class="menu-list" id="menuList">
+        <li><a onclick="Home()">Inicio</a></li>
+
+        <li><a onclick="Comentario()">Comentarios</a></li>
+    </ul>
+</div>
+
+
+<div id="jugador" class="jugadorSaltar" style="width: 300px;height: 300px;">
+    <img src="Jugador.png" alt="jugador">
+</div>
+
+<button onclick="Sumas()" type="button" class="BT_nivel BT_nivel-x" style="left:700px ;top: 250px;">Sumas</button>
+<button onclick="Restas()" type="button" class="BT_nivel BT_nivel-x" style="left:700px ;top: 350px;">Restas</button>
+<button onclick="Multiplicaciones()"type="button" class="BT_nivel BT_nivel-x" style="left:700px ;top: 450px;">Multiplicación</button>
+<button onclick="Divisiones()" type="button" class="BT_nivel BT_nivel-x" style="left:700px ;top: 550px;">División</button>
+
+
+
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

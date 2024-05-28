@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosity Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+
+<div id="board">
+   
+    <div id="fondo"></div>
+
+    <div id="Carganivel" style="top: 15%;left: 30%; ">
+        <h1>Operación y resultado actual:</h1>
+        
+        <div id="contenedor"></div>
+
+    </div>
+
+    <div id="jugador"><img src="Jugador.png" alt="jugador"></div>
+
+    <div id="Hogo" class="Reinicio_Obstaculos" ><img src="Hogo.png" alt="Hogo"></div>
+
+    <div id="Murcielago" class="Reinicio_Obstaculos"><img src="Murcielago.png" alt="Murcielago"></div>
+    
+    <div><button id="jugadorSaltar"><img src="BotonSaltar.png" alt="jugadorSaltar"></button></div>
+
+    <div></div><button id="BotonPausa" ><img src="BotonPausa.png" alt="BotonPausa"></button></div>
+   
+    <div><button id="BotonPlay" ><img src="BotonPlay.png" alt="BotonPlay"></button></div>
+    
+    <div><button id="BotonReanudar" ><img src="BotonSiguiente.png" alt="BotonReanudar"></button></div>
+    
+    <div><button id="BotonConfiguracion" onclick="irANiveles()"><img src="BotonConfiguracion.png" alt="BotonConfiguracion"></button></div>
+
+
+</div>
+<script src="./Script.js"></script>
+
+</body>
+</html>

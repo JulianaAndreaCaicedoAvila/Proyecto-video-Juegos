@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu niveles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="board" class="fondoNiveles ">
+    <div class="menu">
+    <button class="menu-btn" onclick="toggleMenu()">Menú</button>
+    <ul class="menu-list" id="menuList">
+        <li><a onclick="InciarSesion()">Iniciar sesión</a></li>
+        <li><a onclick="CerrarSesion()">Cerrar sesión</a></li>
+        <li><a onclick="irANiveles()">Jugar</a></li>
+        <li><a onclick="Home()">Inicio</a></li>
+      </ul>
+    </div>
+
+
+    <div class="contenedor">
+        <h1>SISTEMAS ENSANBLADORES Y DIGITALES. </h1>
+        <p style="color: white;"> El proyecto abordará la problemática acerca de la falta de actividades
+            alternativas fuera del mundo digital en niños de 5 a 12 años mediante 
+            la implementación de un juego didáctico denominado STEM. Este juego busca
+            proporcionar una alternativa atractiva y educativa para los menores,
+            incentivando el aprendizaje y el desarrollo integral de los niños. 
+            Se diseñará como un juego interactivo que incorpora actividades 
+            relacionadas con conceptos matemáticos.</p>
+
+        <div class="comentarios"><textarea placeholder="Escribe tu comentario aquí"></textarea></div>
+
+        <button type="button" class="BT_nivel BT_nivel-x" style="width:150px;right: 130px;top: 600px;" onclick="Home()">Enviar</button>
+
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
