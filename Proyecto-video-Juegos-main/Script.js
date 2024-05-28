@@ -4,15 +4,81 @@ const jugadorSaltar = document.getElementById("jugadorSaltar");
 const Murcielago = document.getElementById("Murcielago");
 const fondo = document.getElementById("fondo");
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "o" || event.key === "O") {
+            Pausa();
+
+            mostrarP();
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "a" || event.key === "A") {
+            mostrarCorrecto();
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "s" || event.key === "S") {
+            mostrarR();
+        }
+    });
+});
+
 
 document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("keydown", function(event) {
         if (event.key === "p" || event.key === "P") {
-            Pausa();
             mostrarCargaNiveles();
         }
     });
 });
+
+
+
+function mostrarP() {
+    const contenedor = document.getElementById("contenedor");
+
+    const div1 = document.createElement("div");
+    div1.setAttribute("id", "Carganivel");
+    div1.setAttribute("style", "width: 40%; height: 25%; left: 30%; top: 10%; background: linear-gradient(135deg, rgba(207, 166, 222, 0.7), rgba(166, 95, 213, 0.7));");
+
+    const h1_1 = document.createElement("h1");
+    h1_1.textContent = "Perdiste";
+
+    const center_1 = document.createElement("center");
+    center_1.appendChild(h1_1);
+
+    div1.appendChild(center_1);
+
+    contenedor.appendChild(div1);
+}
+
+
+function mostrarCorrecto() {
+    const contenedor = document.getElementById("contenedor");
+
+    const div1 = document.createElement("div");
+    div1.setAttribute("id", "Carganivel");
+    div1.setAttribute("style", "width: 40%; height: 25%; left: 30%; top: 73%; background: linear-gradient(135deg, rgba(207, 166, 222, 0.7), rgba(166, 95, 213, 0.7));");
+
+    const h1_1 = document.createElement("h1");
+    h1_1.textContent = "Correcto";
+
+    const center_1 = document.createElement("center");
+    center_1.appendChild(h1_1);
+
+    div1.appendChild(center_1);
+
+    contenedor.appendChild(div1);
+}
+
 
 function mostrarCargaNiveles() {
     const contenedor = document.getElementById("contenedor");
@@ -29,23 +95,27 @@ function mostrarCargaNiveles() {
 
     div1.appendChild(center_1);
 
-    const div2 = document.createElement("div");
-    div2.setAttribute("id", "Carganivel");
-    div2.setAttribute("style", "width: 40%; height: 30%; left: 55%; top: 40%; background: linear-gradient(135deg, rgba(166, 95, 213, 0.7), rgba(207, 166, 222, 0.7));");
-
-    const h1_2 = document.createElement("h1");
-    h1_2.textContent = "15";
-
-    const center_2 = document.createElement("center");
-    center_2.appendChild(h1_2);
-
-    div2.appendChild(center_2);
-
     contenedor.appendChild(div1);
-    contenedor.appendChild(div2);
 }
 
+function mostrarR() {
+    const contenedor = document.getElementById("contenedor");
 
+   
+    const div1 = document.createElement("div");
+    div1.setAttribute("id", "Carganivel");
+    div1.setAttribute("style", "width: 40%; height: 30%; left: 55%; top: 40%; background: linear-gradient(135deg, rgba(166, 95, 213, 0.7), rgba(207, 166, 222, 0.7));");
+
+    const h1_1 = document.createElement("h1");
+    h1_1.textContent = "15";
+
+    const center_1 = document.createElement("center");
+    center_1.appendChild(h1_1);
+
+    div1.appendChild(center_1);
+
+    contenedor.appendChild(div1);
+}
 
 
 
